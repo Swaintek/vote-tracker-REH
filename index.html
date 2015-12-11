@@ -8,30 +8,36 @@
   <script src='chart.js'></script>
 </head>
 <body>
-  <header>What Scares You More?</header>
-<main>
-  <div id="picDiv" class="four.columns">
-  <figure id="picFrame1"> Image here
-  </figure>
-  <canvas id="fearChart" width+"300px" height="300px"></canvas>
-   <figure id="picFrame2" class="four.columns"> Image here
-  </figure>
-</div>
-  <div id="legend">
-    <p id="clown">Clowns<span id="clownTotal"></span></p>
-    <p id="dog">Dogs<span id="dogTotal"></span></p>
-    <p id="germ">Germs<span id="germTotal"></span></p>
-    <p id="heights">Heights<span id="heightsTotal"></span></p>
-    <p id="kitten">Kittens<span id="kittenTotal"></span></p>
-    <p id="lightning">Lightning<span id="lightningTotal"></span></p>
-    <p id="needle">Needles<span id="needleTotal"></span></p>
-    <p id="snake">Snakes<span id="snakeTotal"></span></p>
-    <p id="spider">Spiders<span id="spiderTotal"></span></p>
-  </div>
+    <header>What Scares You More?</header>
+    <main>
+      <div id="picDiv" class="four.columns">
+        <figure id="picFrame1"> Image here</figure>
+        <canvas id="fearChart" width+"300px" height="300px"></canvas>
+        <figure id="picFrame2" class="four.columns"> Image here</figure>
+      </div>
+
+      <div id="legend">
+        <!--
+        <p id="clown">Clowns<span id="clownTotal"></span></p>
+        <p id="dog">Dogs<span id="dogTotal"></span></p>
+        <p id="germ">Germs<span id="germTotal"></span></p>
+        <p id="heights">Heights<span id="heightsTotal"></span></p>
+        <p id="kitten">Kittens<span id="kittenTotal"></span></p>
+        <p id="lightning">Lightning<span id="lightningTotal"></span></p>
+        <p id="needle">Needles<span id="needleTotal"></span></p>
+        <p id="snake">Snakes<span id="snakeTotal"></span></p>
+        <p id="spider">Spiders<span id="spiderTotal"></span></p>
+        -->
+      </div>
 
 
-  <main>
- <footer></footer>
- <script src ="app.js"></script>
+    <main>
+    <footer id="legend"></footer>
+    <!-- JS libraries 'jQuery' + 'Bootstraps jQuery'-->
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <!-- <script src ="app.js"></script> -->
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/html5sql.js"></script> <!-- Needed server functionality -->
+    <script type="text/javascript" src="js/webdb.js"></script> <!-- Needed server functionality -->
 </body>
 </html5>
