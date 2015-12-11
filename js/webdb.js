@@ -1,10 +1,6 @@
 var webDB = {};
 webDB.sqlResult = null;
 
-$(function() {
-  webDB.init();
-});
-
 webDB.verbose = function (verbose) {
   var msg;
   if (verbose) {
@@ -26,7 +22,7 @@ webDB.init = function() {
   try {
     if (openDatabase) {
       webDB.verbose(true);
-      webDB.connect('blogDB', 'Blog Database', 5*1024*1024);
+      webDB.connect('datatable', 'Data Table', 5*1024*1024);
       webDB.setupTables();
     } else {
       console.log('Web Databases not supported.');
@@ -42,8 +38,10 @@ webDB.connect = function (database, title, size) {
 };
 
 webDB.setupTables = function () {
-  html5sql.process(
-    'CREATE TABLE IF NOT EXISTS articles (id INTEGER, title TEXT, category TEXT, author TEXT, authorUrl TEXT, publishedOn DATE, markdown TEXT)',
+  html5sql.process([
+    {sql: "CREATE TABLE IF NOT EXISTS photo_table (category TEXT, caption TEXT, img_path TEXT)"},
+    {sql: "CREATE TABLE IF NOT EXISTS category_table (category TEXT, score INTEGER, color TEXT)"}
+  ],
     function() {
       // on success
     }
